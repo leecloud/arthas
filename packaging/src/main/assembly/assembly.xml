@@ -1,0 +1,52 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.1 http://maven.apache.org/xsd/assembly-1.1.1.xsd">
+  <id>bin</id>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <formats>
+    <format>zip</format>
+  </formats>
+
+  <files>
+    <file>
+      <source>../spy/target/arthas-spy.jar</source>
+      <destName>arthas-spy.jar</destName>
+    </file>
+    <file>
+      <source>../core/target/arthas-core-jar-with-dependencies.jar</source>
+      <destName>arthas-core.jar</destName>
+    </file>
+    <file>
+      <source>../agent/target/arthas-agent-jar-with-dependencies.jar</source>
+      <destName>arthas-agent.jar</destName>
+    </file>
+    <file>
+      <source>../client/target/arthas-client-jar-with-dependencies.jar</source>
+      <destName>arthas-client.jar</destName>
+    </file>
+    <file>
+      <source>../boot/target/arthas-boot-jar-with-dependencies.jar</source>
+      <destName>arthas-boot.jar</destName>
+    </file>
+    <file>
+      <source>../demo/target/arthas-demo.jar</source>
+      <destName>arthas-demo.jar</destName>
+    </file>
+
+    <file>
+      <source>../bin/install-local.sh</source>
+      <fileMode>0755</fileMode>
+      <filtered>true</filtered>
+    </file>
+    <file>
+      <source>../bin/as.sh </source>
+      <fileMode>0755</fileMode>
+    </file>
+    <file>
+      <source>../bin/as.bat</source>
+    </file>
+    <file>
+      <source>../bin/as-service.bat</source>
+    </file>
+  </files>
+</assembly>
